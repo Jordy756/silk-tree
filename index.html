@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./src/styles/bases/reset.css" />
+        <link rel="stylesheet" href="./src/styles/bases/style.css" />
+        <link rel="stylesheet" href="./src/styles/pages/index.css" />
+        <link rel="stylesheet" href="./src/styles/components/navbar.css" />
+        <title>SilkTree</title>
+    </head>
+    <body>
+        <div id="app" class="app">
+            <header class="header">
+                <nav class="nav">
+                    <figure class="nav__logo">
+                        <img class="nav__logo-img" src="https://github.com/Jordy756.png" alt="SilkTree logo" />
+                    </figure>
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" aria-label="About us">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" aria-label="Our services">Services</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" aria-label="Contact us">Contact</a>
+                        </li>
+                    </ul>
+                    <nav class="header__cta">
+                        <a href="#" class="header__cta-link" aria-label="Sign up">Sign Up</a>
+                        <a href="#" class="header__cta-link" aria-label="Sign in">Sign In</a>
+                    </nav>
+                </nav>
+                <section class="hero">
+                    <div class="hero__content">
+                        <h1 class="hero__title">
+                            <span class="hero__subtitle">Welcome to</span>
+                            SilkTree
+                        </h1>
+                        <p class="hero__description">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum esse ea recusandae, eum
+                            deserunt quibusdam ipsa vitae eos? Modi, blanditiis dicta animi consequuntur repudiandae
+                            dignissimos odio error magnam minus sapiente.
+                        </p>
+                        <a href="#" class="hero__cta">Agendar cita</a>
+                    </div>
+                </section>
+                <spline-viewer
+                    class="object__viewer"
+                    url="https://prod.spline.design/MrGXePo5wZuT-6ZA/scene.splinecode"
+                ></spline-viewer>
+                <article class="award__article">
+                    <div class="award__content">
+                        <span class="award__number">01</span>
+                        <div class="award__info">
+                            <time class="award__date" datetime="2024-07-10">2024-07-10</time>
+                            <h2 class="award__title">Hospital #1 de Costa Rica</h2>
+                        </div>
+                    </div>
+                    <p class="award__description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil harum magnam nulla,
+                        amet, omnis deleniti unde aut, assumenda impedit odio provident repudiandae. Ipsum atque culpa
+                        labore nemo aliquam sequi.
+                    </p>
+                </article>
+            </header>
+            <main class="main">
+                <!-- Contenido principal aquí -->
+            </main>
+        </div>
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.21/build/spline-viewer.js"></script>
+    </body>
+</html>

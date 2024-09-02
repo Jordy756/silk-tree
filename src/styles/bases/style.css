@@ -3,6 +3,7 @@
 :root {
     --font: Poppins, system-ui, "Open Sans", sans-serif;
     --min-width: 1500px;
+    --min-width: 100%;
     --white-color: #f3f5f4;
     --black-color: #000000;
 }

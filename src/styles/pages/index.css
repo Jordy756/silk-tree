@@ -92,8 +92,45 @@
     max-width: 20ch;
 }
 
-main {
+/* MAIN */
+
+.main {
     min-width: var(--min-width);
-    min-height: 100vh;
-    background-color: red;
+    padding: 1rem;
+}
+
+/* MARQUEE SECTION */
+.marquee {
+    display: flex;
+    gap: 5rem;
+    overflow: hidden;
+}
+
+.marquee__list {
+    display: flex;
+    gap: 5rem;
+    animation: scrollLeft 15s linear infinite;
+}
+
+.marquee__item {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+}
+
+.marquee__title {
+    text-transform: uppercase;
+    font-size: 5rem;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+@keyframes scrollLeft {
+    to {
+        transform: translateX(calc(-100% - 5rem));
+    }
+}
+
+.marquee__list:hover .marquee__item {
+    animation-play-state: paused;
 }

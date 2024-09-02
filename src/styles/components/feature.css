@@ -1,0 +1,26 @@
+.feature__icon::before,
+.feature__icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 1px;
+    background-color: var(--black-color);
+}
+
+.feature__icon::before {
+    transform: translate(-50%, -50%);
+}
+
+.feature__icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--black-color);
+    border-radius: 50%;
+}
+
+.feature__icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}

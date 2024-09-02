@@ -131,6 +131,6 @@
     }
 }
 
-.marquee__list:hover .marquee__item {
+.marquee:hover .marquee__list {
     animation-play-state: paused;
 }

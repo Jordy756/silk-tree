@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="./src/styles/bases/style.css" />
         <link rel="stylesheet" href="./src/styles/pages/index.css" />
         <link rel="stylesheet" href="./src/styles/components/navbar.css" />
+        <link rel="stylesheet" href="./src/styles/components/marquee.css" />
         <link rel="stylesheet" href="./src/styles/components/feature.css" />
         <title>SilkTree</title>
     </head>
@@ -104,13 +105,14 @@
                     </ul>
                 </section>
                 <section id="about-us" class="about__us">
-                    <div class="pin-wrap-sticky">
+                    <div class="pin__wrap-sticky">
+                        <!-- <h2 class="about__us-title">Sobre nosotros</h2> -->
                         <p class="about__us-description">
                             En SilkTree, nos dedicamos a proporcionar atención médica de la más alta calidad a nuestros
                             pacientes. Con tecnología de vanguardia y un equipo de profesionales altamente capacitados,
                             estamos comprometidos a mejorar la salud y el bienestar de nuestra comunidad.
                         </p>
-                        <div class="pin-wrap">
+                        <div class="pin__wrap">
                             <section class="statistics">
                                 <article class="statistics__card">
                                     <p class="statistics__card-description">Años de excelencia</p>
@@ -141,27 +143,90 @@
                     </div>
                 </section>
                 <section id="services" class="services">
-                    <h2 class="services__title">La ciencia detras de nuestros servicios</h2>
-                    <div class="service__information">
-                        <picture class="services__picture">
-                            <img src="./src/assets/images/ImgCarousel1.webp" class="services__image" alt="" />
-                        </picture>
-                        <div class="prueba">
-                            <p class="services__description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum similique repellendus
-                                temporibus molestiae sint obcaecati odio, sapiente ipsam dolore at nobis corrupti minus
-                                ducimus omnis blanditiis minima nisi. Minus, officiis.
-                            </p>
-                        </div>
+                    <div class="pin__wrap-sticky">
+                        <section class="marquee">
+                            <ul class="marquee__list">
+                                <li class="marquee__item">
+                                    <h4 class="marquee__title">Nuestros servicios</h4>
+                                    <div class="feature__icon"></div>
+                                </li>
+                                <li class="marquee__item">
+                                    <h4 class="marquee__title">Equipo de profesionales</h4>
+                                    <div class="feature__icon"></div>
+                                </li>
+                                <li class="marquee__item">
+                                    <h4 class="marquee__title">Tecnología de punta</h4>
+                                    <div class="feature__icon"></div>
+                                </li>
+                                <li class="marquee__item">
+                                    <h4 class="marquee__title">Ambiente seguro</h4>
+                                    <div class="feature__icon"></div>
+                                </li>
+                            </ul>
+                            <ul class="marquee__list">
+                                <li class="marquee__item">
+                                    <h4 class="marquee__title">Nuestros servicios</h4>
+                                    <div class="feature__icon"></div>
+                                </li>
+                                <li class="marquee__item">
+                                    <h4 class="marquee__title">Equipo de profesionales</h4>
+                                    <div class="feature__icon"></div>
+                                </li>
+                                <li class="marquee__item">
+                                    <h4 class="marquee__title">Tecnología de punta</h4>
+                                    <div class="feature__icon"></div>
+                                </li>
+                                <li class="marquee__item">
+                                    <h4 class="marquee__title">Ambiente seguro</h4>
+                                    <div class="feature__icon"></div>
+                                </li>
+                            </ul>
+                        </section>
+                        <ul class="services__list">
+                            <li style="--scroll-trigger: 83.33%" class="services__item">
+                                <img src="./src/assets/images/ImgCarousel1.webp" class="services__img" alt="" />
+                                <div class="services__content">
+                                    <h4 class="services__title">Cardiología</h4>
+                                    <span class="services__chip">Services</span>
+                                </div>
+                            </li>
+                            <li style="--scroll-trigger: 66.67%" class="services__item">
+                                <img src="./src/assets/images/ImgCarousel2.webp" class="services__img" alt="" />
+                                <div class="services__content">
+                                    <h4 class="services__title">Neurología</h4>
+                                    <span class="services__chip">Services</span>
+                                </div>
+                            </li>
+                            <li style="--scroll-trigger: 50%" class="services__item">
+                                <img src="./src/assets/images/ImgCarousel3.webp" class="services__img" alt="" />
+                                <div class="services__content">
+                                    <h4 class="services__title">Pediatría</h4>
+                                    <span class="services__chip">Services</span>
+                                </div>
+                            </li>
+                            <li style="--scroll-trigger: 33.33%" class="services__item">
+                                <img src="./src/assets/images/ImgCarousel4.webp" class="services__img" alt="" />
+                                <div class="services__content">
+                                    <h4 class="services__title">Ginecología</h4>
+                                    <span class="services__chip">Services</span>
+                                </div>
+                            </li>
+                            <li style="--scroll-trigger: 16.67%" class="services__item">
+                                <img src="./src/assets/images/ImgCarousel5.webp" class="services__img" alt="" />
+                                <div class="services__content">
+                                    <h4 class="services__title">Oftalmología</h4>
+                                    <span class="services__chip">Services</span>
+                                </div>
+                            </li>
+                            <li style="--scroll-trigger: 0%" class="services__item">
+                                <img src="./src/assets/images/ImgCarousel6.webp" class="services__img" alt="" />
+                                <div class="services__content">
+                                    <h4 class="services__title">Dermatología</h4>
+                                    <span class="services__chip">Services</span>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="services__list">
-                        <li class="services__item">Cardiología</li>
-                        <li class="services__item">Dermatología</li>
-                        <li class="services__item">Endocrinología</li>
-                        <li class="services__item">Gastroenterología</li>
-                        <li class="services__item">Geriatría</li>
-                        <li class="services__item">Ginecología</li>
-                    </ul>
                 </section>
                 <section>sdfsdf</section>
                 <section>sdfsdf</section>

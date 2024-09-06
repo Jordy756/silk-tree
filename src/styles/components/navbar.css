@@ -33,7 +33,7 @@
 }
 
 .nav__link {
-    color: var(--black-color);
+    color: var(--font-color);
 }
 
 .header__cta-link {
@@ -42,7 +42,7 @@
 }
 
 .header__cta-link:first-child {
-    background-color: var(--black-color);
+    background-color: var(--primary-color);
     color: var(--white-color);
 }
 

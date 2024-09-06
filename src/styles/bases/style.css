@@ -6,7 +6,9 @@
     --min-width: 100%;
     --white-color: #f3f5f4;
     --black-color: #131212;
-    --violet-color: #9589E9;
+    --primary-color: #9589E9;
+    --background-color: var(--white-color);
+    --font-color: var(--black-color);
 }
 
 * {
@@ -25,8 +27,8 @@ body {
     font-family: var(--font);
     font-size: 1rem;
     line-height: 1.5;
-    background-color: var(--white-color);
-    color: var(--black-color);
+    background-color: var(--background-color);
+    color: var(--font-color);
 }
 
 h1 {

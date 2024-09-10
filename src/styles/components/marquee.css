@@ -7,7 +7,7 @@
 .marquee__list {
     display: flex;
     gap: 5rem;
-    animation: scrollLeft 15s linear infinite;
+    animation: scrollLeft 10s linear infinite;
 }
 
 .marquee__item {

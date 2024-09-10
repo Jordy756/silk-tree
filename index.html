@@ -7,8 +7,13 @@
         <link rel="stylesheet" href="./src/styles/bases/style.css" />
         <link rel="stylesheet" href="./src/styles/pages/index.css" />
         <link rel="stylesheet" href="./src/styles/components/navbar.css" />
+        <link rel="stylesheet" href="./src/styles/sections/hero.css" />
+        <link rel="stylesheet" href="./src/styles/sections/about-us.css" />
+        <link rel="stylesheet" href="./src/styles/sections/services.css" />
+        <link rel="stylesheet" href="./src/styles/sections/faq.css" />
         <link rel="stylesheet" href="./src/styles/components/marquee.css" />
         <link rel="stylesheet" href="./src/styles/components/feature.css" />
+        <link rel="stylesheet" href="./src/styles/components/footer.css" />
         <title>SilkTree</title>
     </head>
     <body>
@@ -16,28 +21,31 @@
             <header class="header">
                 <nav class="nav">
                     <figure class="nav__logo">
-                        <img class="nav__logo-img" src="https://github.com/Jordy756.png" alt="SilkTree logo" />
+                        <img class="nav__logo-img" src="./src/assets/images/logo.png" alt="SilkTree logo" />
                     </figure>
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="#about-us" class="nav__link" aria-label="About us">About</a>
+                            <a href="#about-us" class="nav__link" aria-label="Sobre nosotros">Sobre nosotros</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#services" class="nav__link" aria-label="Our services">Services</a>
+                            <a href="#services" class="nav__link" aria-label="Servicios">Servicios</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link" aria-label="Contact us">Contact</a>
+                            <a href="#" class="nav__link" aria-label="Contactanos">Contactanos</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" aria-label="Contactanos">Medicos</a>
                         </li>
                     </ul>
                     <nav class="header__cta">
-                        <a href="#" class="header__cta-link" aria-label="Sign up">Sign Up</a>
-                        <a href="#" class="header__cta-link" aria-label="Sign in">Sign In</a>
+                        <a href="#" class="header__cta-link" aria-label="Empezar">Empezar</a>
+                        <!-- <a href="#" class="header__cta-link" aria-label="Sign in">Sign In</a> -->
                     </nav>
                 </nav>
                 <section class="hero">
                     <div class="hero__content">
-                        <h2 class="hero__subtitle">The best hospital in Costa Rica</h2>
-                        <h1 class="hero__title">Welcome to SilkTree</h1>
+                        <h2 class="hero__subtitle">Bienvenido a</h2>
+                        <h1 class="hero__title">SilkTree</h1>
                         <p class="hero__description">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum esse ea recusandae, eum
                             deserunt quibusdam ipsa vitae eos? Modi, blanditiis dicta animi consequuntur repudiandae
@@ -45,25 +53,25 @@
                         </p>
                         <a href="#" class="hero__cta">Agendar cita</a>
                     </div>
+                    <article class="award__article">
+                        <div class="award__content">
+                            <span class="award__number">01</span>
+                            <div class="award__info">
+                                <time class="award__date" datetime="2024-07-10">2024-07-10</time>
+                                <h3 class="award__title">Hospital #1 de Costa Rica</h3>
+                            </div>
+                        </div>
+                        <p class="award__description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil harum magnam nulla,
+                            amet, omnis deleniti unde aut, assumenda impedit odio provident repudiandae. Ipsum atque
+                            culpa labore nemo aliquam sequi.
+                        </p>
+                    </article>
                 </section>
                 <spline-viewer
                     class="object__viewer"
                     url="https://prod.spline.design/MrGXePo5wZuT-6ZA/scene.splinecode"
                 ></spline-viewer>
-                <article class="award__article">
-                    <div class="award__content">
-                        <span class="award__number">01</span>
-                        <div class="award__info">
-                            <time class="award__date" datetime="2024-07-10">2024-07-10</time>
-                            <h3 class="award__title">Hospital #1 de Costa Rica</h3>
-                        </div>
-                    </div>
-                    <p class="award__description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil harum magnam nulla,
-                        amet, omnis deleniti unde aut, assumenda impedit odio provident repudiandae. Ipsum atque culpa
-                        labore nemo aliquam sequi.
-                    </p>
-                </article>
             </header>
             <main class="main">
                 <section class="marquee">
@@ -228,9 +236,135 @@
                         </ul>
                     </div>
                 </section>
-                <section>sdfsdf</section>
-                <section>sdfsdf</section>
+                <section id="faq" class="faq">
+                    <h2 class="faq__title">Preguntas frecuentes</h2>
+                    <ul class="faq__list">
+                        <li class="faq__item">
+                            <input type="checkbox" id="pregunta1" class="faq__toggle" />
+                            <label for="pregunta1" class="faq__question">¿Los servicios son gratuitos?</label>
+                            <div class="faq__answer">
+                                <div class="faq__answer-inner">
+                                    <p class="faq__answer-text">
+                                        No, nuestros servicios no son gratuitos. Sin embargo, ofrecemos opciones de
+                                        financiamiento y seguros médicos para ayudar a nuestros pacientes a cubrir los
+                                        costos.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="faq__item">
+                            <input type="checkbox" id="pregunta2" class="faq__toggle" />
+                            <label for="pregunta2" class="faq__question">¿Cuál es el costo de una consulta?</label>
+                            <div class="faq__answer">
+                                <div class="faq__answer-inner">
+                                    <p class="faq__answer-text">
+                                        El costo de una consulta varía dependiendo del especialista y el tipo de
+                                        atención que requiera. Para más información, por favor contáctenos.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="faq__item">
+                            <input type="checkbox" id="pregunta3" class="faq__toggle" />
+                            <label for="pregunta3" class="faq__question">¿Cómo puedo agendar una cita?</label>
+                            <div class="faq__answer">
+                                <div class="faq__answer-inner">
+                                    <p class="faq__answer-text">
+                                        Puede agendar una cita llamando a nuestro número de teléfono o visitando nuestra
+                                        página web.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="faq__item">
+                            <input type="checkbox" id="pregunta4" class="faq__toggle" />
+                            <label for="pregunta4" class="faq__question">¿Qué debo llevar a mi consulta?</label>
+                            <div class="faq__answer">
+                                <div class="faq__answer-inner">
+                                    <p class="faq__answer-text">
+                                        Por favor lleve consigo su cédula de identidad, tarjeta de seguro médico y
+                                        cualquier documento médico relevante.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="faq__item">
+                            <input type="checkbox" id="pregunta5" class="faq__toggle" />
+                            <label for="pregunta5" class="faq__question">¿Cuál es la política de cancelación?</label>
+                            <div class="faq__answer">
+                                <div class="faq__answer-inner">
+                                    <p class="faq__answer-text">
+                                        Si necesita cancelar su cita, por favor hágalo con al menos 24 horas de
+                                        anticipación para evitar cargos adicionales.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="faq__item">
+                            <input type="checkbox" id="pregunta6" class="faq__toggle" />
+                            <label for="pregunta6" class="faq__question">¿Qué debo hacer en caso de emergencia?</label>
+                            <div class="faq__answer">
+                                <div class="faq__answer-inner">
+                                    <p class="faq__answer-text">
+                                        En caso de emergencia, por favor llame al 911 o diríjase a la sala de
+                                        emergencias más cercana.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="faq__item">
+                            <input type="checkbox" id="pregunta7" class="faq__toggle" />
+                            <label for="pregunta7" class="faq__question">¿Cuál es el horario de atención?</label>
+                            <div class="faq__answer">
+                                <div class="faq__answer-inner">
+                                    <p class="faq__answer-text">
+                                        Nuestro horario de atención es de lunes a viernes de 8:00 a.m. a 5:00 p.m. y
+                                        sábados de 8:00 a.m. a 12:00 p.m.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
             </main>
+            <footer class="footer">
+                <section class="footer__content">
+                    <div class="footer__brand">
+                        <figure class="footer__logo">
+                            <img src="./src/assets/images/logo.png" class="footer__logo-img" alt="SilkTree logo" />
+                        </figure>
+                        <p class="footer__slogan">Cuidando tu salud con confianza y dedicación</p>
+                        <a href="#" class="footer__cta">Agendar cita</a>
+                    </div>
+                    <nav class="footer__nav">
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <span class="footer__number">01</span>
+                                <a href="#about-us" class="footer__link">Sobre nosotros</a>
+                            </li>
+                            <li class="footer__item">
+                                <span class="footer__number">02</span>
+                                <a href="#services" class="footer__link">Servicios</a>
+                            </li>
+                            <li class="footer__item">
+                                <span class="footer__number">03</span>
+                                <a href="#services" class="footer__link">Medicos</a>
+                            </li>
+                            <li class="footer__item">
+                                <span class="footer__number">04</span>
+                                <a href="#" class="footer__link">Contacto</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="footer__info">
+                    <span class="footer__copy">&copy; SilkTree 2024</span>
+                    <div class="footer__terms">
+                        <a href="#" class="footer__link">Términos y condiciones</a>
+                        <a href="#" class="footer__link">Política de privacidad</a>
+                    </div>
+                </section>
+            </footer>
         </div>
         <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.21/build/spline-viewer.js"></script>
     </body>

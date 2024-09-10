@@ -1,0 +1,115 @@
+.about__us {
+    height: 200dvh;
+    view-timeline-name: --section-pin-tl;
+    view-timeline-axis: block;
+}
+
+.about__us > .pin__wrap-sticky::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%;
+    border: 1px dashed #c2bebece;
+}
+
+.about__us > .pin__wrap-sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    overflow-x: hidden;
+}
+
+.about__us > .pin__wrap-sticky::after {
+    content: "";
+    position: absolute;
+    top: calc(10% - 7px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 7px;
+    height: 7px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    animation: move-circle linear forwards;
+    animation-timeline: --section-pin-tl;
+    animation-range: contain 0% contain 100%;
+}
+
+.about__us-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 50ch;
+    font-size: 1.5rem;
+    text-align: center;
+    z-index: 1;
+}
+
+.about__us > .pin__wrap-sticky > .pin__wrap {
+    width: 300dvw;
+    height: 100dvh;
+    will-change: transform;
+    animation: move-card linear forwards;
+    animation-timeline: --section-pin-tl;
+    animation-range: contain 0% contain 100%;
+    display: flex;
+    align-items: center;
+}
+
+.statistics {
+    padding: 1rem 0rem;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    width: 250vw;
+    height: 85dvh;
+    gap: 5rem;
+}
+
+.statistics__card {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    width: 300px;
+    height: 200px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.statistics__card:first-child,
+.statistics__card:nth-child(2),
+.statistics__card:nth-child(3) {
+    align-self: flex-end;
+}
+
+.statistics__card:nth-child(3) {
+    margin-right: 10rem;
+}
+
+.statistics__card-description {
+    text-align: end;
+}
+
+.statistics__card-title {
+    text-align: center;
+    font-size: 5rem;
+}
+
+@keyframes move-card {
+    to {
+        transform: translateX(calc(-200vw));
+    }
+}
+
+@keyframes move-circle {
+    to {
+        top: 90%;
+    }
+}

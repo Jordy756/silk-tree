@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Carrusel de Imágenes</title>
+        <style>
+            .wrapper {
+                position: relative;
+                max-width: 600px;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+            .images__slider {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+            }
+            .image__slider {
+                min-width: 100%;
+                height: auto;
+            }
+            .carousel-buttons {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                gap: 10px;
+            }
+            .carousel-button {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                border: none;
+                background-color: #fff;
+                opacity: 0.5;
+                cursor: pointer;
+            }
+            .carousel-button.active {
+                opacity: 1;
+            }
+                            
+
+            .images__slider {
+                animation: slide 15s alternate infinite;
+            }
+
+            .images__slider:hover {
+                animation-play-state: paused;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="images__slider">
+                <img src="./src/assets/images/ImgCarousel1.webp" alt="Imagen de fondo" class="image__slider" />
+                <img src="./src/assets/images/ImgCarousel2.webp" alt="Imagen de fondo" class="image__slider" />
+                <img src="./src/assets/images/ImgCarousel3.webp" alt="Imagen de fondo" class="image__slider" />
+            </div>
+            <div class="carousel-buttons">
+                <button class="carousel-button active"></button>
+                <button class="carousel-button"></button>
+                <button class="carousel-button"></button>
+            </div>
+        </div>
+    </body>
+</html>

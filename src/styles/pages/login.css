@@ -1,0 +1,136 @@
+.app {
+    min-height: 100dvh;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    gap: 2rem;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    width: min(100%, 1000px);
+    height: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.login__section,
+.register__section,
+.login__form,
+.register__form,
+.login__wrapper-info,
+.register__wrapper-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.login__section,
+.register__section {
+    flex: 1;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.register__section {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.login__title,
+.register__title {
+    text-align: center;
+}
+
+.forgot__password {
+    text-align: end;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.register__separator {
+    padding-inline: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.first__line,
+.second__line {
+    flex: 1;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.separator__text {
+    color: #ccc;
+}
+
+.register__container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.register__link {
+    color: var(--primary-color);
+}
+
+.wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    transition: right 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.login__wrapper-info,
+.register__wrapper-info {
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.login__wrapper-info {
+    opacity: 0;
+}
+
+.wrapper .secondary__btn {
+    color: var(--white-color);
+    border: 1px solid var(--white-color);
+}
+
+.wrapper.change {
+    right: 50%;
+}
+
+.wrapper.change > .register__wrapper-info {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.wrapper.change > .login__wrapper-info {
+    transform: translateY(-100%);
+    opacity: 1;
+}
+
+.main.change > .login__section {
+    transform: translateX(calc(-100% - 1rem));
+    opacity: 0;
+}
+
+.main.change > .register__section {
+    transform: translateX(0);
+    opacity: 1;
+}

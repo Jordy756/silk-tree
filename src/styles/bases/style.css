@@ -26,7 +26,6 @@ html {
 body {
     font-family: var(--font);
     font-size: 1rem;
-    line-height: 1.5;
     background-color: var(--background-color);
     color: var(--font-color);
 }
@@ -53,6 +52,11 @@ h5 {
 
 h6 {
     font-size: 1.2rem;
+}
+
+button {
+    font-family: var(--font);
+    font-size: 1rem;
 }
 
 .app {

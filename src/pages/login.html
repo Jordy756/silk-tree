@@ -1,11 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../styles/bases/reset.css" />
+        <link rel="stylesheet" href="../styles/bases/style.css" />
+        <link rel="stylesheet" href="../styles/pages/login.css" />
+        <link rel="stylesheet" href="../styles/components/input.css" />
+        <link rel="stylesheet" href="../styles/components/button.css" />
+        <title>SilkTree</title>
+    </head>
+    <body>
+        <div id="app" class="app">
+            <main class="main">
+                <section class="login__section">
+                    <h2 class="login__title">Iniciar sesion</h2>
+                    <form class="login__form">
+                        <div class="form__group">
+                            <input type="email" id="email" name="email" class="input" placeholder="" />
+                            <label for="email" class="label">Correo electronico</label>
+                            <span class="input__error"></span>
+                        </div>
+                        <div class="form__group">
+                            <input type="password" id="password" name="password" class="input" placeholder="" />
+                            <label for="password" class="label">Contrasena</label>
+                            <span class="input__error"></span>
+                        </div>
+                        <p class="forgot__password">Olvido su contrasena?</p>
+                        <button type="submit" class="primary__btn">Iniciar sesion</button>
+                    </form>
+                    <div class="register__separator">
+                        <div class="first__line"></div>
+                        <p class="separator__text">O iniciar con</p>
+                        <div class="second__line"></div>
+                    </div>
+                    <button type="button" class="secondary__btn">
+                        <img src="../assets/icons/Google.svg" alt="Logo de Google" />Google
+                    </button>
+                    <!-- <div class="register__container">
+                        <p class="register__account-text">No tienes una cuenta?</p>
+                        <a href="#" class="register__link">Registrate</a>
+                    </div> -->
+                </section>
+                <section class="register__section">
+                    <h2 class="register__title">Registrate</h2>
+                    <form class="register__form">
+                        <div class="form__group-container">
+                            <div class="form__group">
+                                <input type="text" id="name" name="name" class="input" placeholder="" />
+                                <label for="name" class="label">Nombre</label>
+                                <span class="input__error"></span>
+                            </div>
+                            <div class="form__group">
+                                <input type="text" id="lastName" name="lastName" class="input" placeholder="" />
+                                <label for="lastName" class="label">Apellido</label>
+                                <span class="input__error"></span>
+                            </div>
+                        </div>
+                        <div class="form__group">
+                            <input type="email" id="email" name="email" class="input" placeholder="" />
+                            <label for="email" class="label">Correo electronico</label>
+                            <span class="input__error"></span>
+                        </div>
+                        <div class="form__group">
+                            <input type="password" id="password" name="password" class="input" placeholder="" />
+                            <label for="password" class="label">Contrasena</label>
+                            <span class="input__error"></span>
+                        </div>
+                        <div class="form__group">
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                class="input"
+                                placeholder=""
+                            />
+                            <label for="confirmPassword" class="label">Confirmar contrasena</label>
+                            <span class="input__error"></span>
+                        </div>
+                        <button type="submit" class="primary__btn">Registrarse</button>
+                    </form>
+                    <div class="register__separator">
+                        <div class="first__line"></div>
+                        <p class="separator__text">O registrate con</p>
+                        <div class="second__line"></div>
+                    </div>
+                    <button type="button" class="secondary__btn">
+                        <img src="../assets/icons/Google.svg" alt="Logo de Google" />Google
+                    </button>
+                </section>
+                <div class="wrapper">
+                    <section class="register__wrapper-info">
+                        <h2 class="register__wrapper-title">Eres nuevo aqui?</h2>
+                        <p class="register__wrapper-text">Registrate y descubre un mundo de posibilidades</p>
+                        <button type="button" class="secondary__btn">Registrate</button>
+                    </section>
+                    <section class="login__wrapper-info">
+                        <h2 class="login__wrapper-title">Ya tienes una cuenta?</h2>
+                        <p class="login__wrapper-text">Inicia sesion y agenda una cita</p>
+                        <button type="button" class="secondary__btn">Iniciar sesion</button>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </body>
+    <script src="../scripts/pages/login.js"></script>
 </html>

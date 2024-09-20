@@ -1,0 +1,87 @@
+.our__team {
+    position: relative;
+    height: 600dvh;
+    view-timeline-name: --our-team-pin-tl;
+    view-timeline-axis: block;
+}
+
+.our__team > .pin__wrap-sticky {
+    position: sticky;
+    inset: 0;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+.circles__container {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background-color: red;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 2px solid var(--black-color);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    z-index: 30;
+    background-color: aliceblue;
+}
+
+.circle.one {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circle.two {
+    bottom: 0;
+    left: 0;
+}
+
+.circle.three {
+    bottom: 0;
+    right: 0;
+}
+
+.triangle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 346px;
+    height: 300px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.triangle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 173px solid transparent;
+    border-right: 173px solid transparent;
+    border-bottom: 300px solid var(--black-color);
+    transform: translateX(-50%);
+}
+
+.triangle::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 169px solid transparent;
+    border-right: 169px solid transparent;
+    border-bottom: 293px solid red;
+    transform: translateX(-50%);
+}

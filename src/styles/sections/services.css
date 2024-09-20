@@ -1,7 +1,7 @@
 .services {
     position: relative;
     height: 600dvh;
-    view-timeline-name: --prueba;
+    view-timeline-name: --services-pin-tl;
     view-timeline-axis: block;
 }
 
@@ -23,6 +23,15 @@
     color: var(--primary-color);
 }
 
+/* .services > .pin__wrap-sticky > .marquee > .marquee__list {
+    animation-duration: 120s;
+} */
+
+/* .services > .pin__wrap-sticky > .marquee .marquee__title {
+    font-size: 20rem;
+    line-height: 1;
+} */
+
 .services__list {
     left: 50%;
     transform: translate(-50%, -50%);
@@ -40,7 +49,7 @@
     transform: translate(-50%, -50%);
     transition: opacity 0.5s ease, transform 0.5s ease;
     animation: show-service linear both;
-    animation-timeline: --prueba;
+    animation-timeline: --services-pin-tl;
     animation-range: contain calc(var(--scroll-trigger) - 8.33%) contain calc(var(--scroll-trigger) + 25%);
     background-color: var(--white-color);
     border-radius: 10px;

@@ -1,10 +1,10 @@
 import "./index.css";
 
-type SeparatorProps = {
+type Props = {
     text?: string;
 };
 
-const Separator = ({ text }: SeparatorProps) => {
+const Separator = ({ text }: Props) => {
     return (
         <div className="form__separator">
             <p>{text}</p>

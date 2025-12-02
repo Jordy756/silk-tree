@@ -1,13 +1,13 @@
 import "./index.css";
 
-type MarqueeProps = {
+type Props = {
     list: string[];
     color?: "var(--neutral-900)" | "var(--primary-500)";
 };
 
-const Marquee = ({ list, color = "var(--neutral-900)" }: MarqueeProps) => {
+const Marquee = ({ list, color = "var(--neutral-900)" }: Props) => {
     return (
-        <aside className={"marquee"} style={{ "--marquee-color": color } as React.CSSProperties}>
+        <aside className="marquee" style={{ "--marquee-color": color } as React.CSSProperties}>
             <ul>
                 {list.map((item, index) => (
                     <li key={index}>

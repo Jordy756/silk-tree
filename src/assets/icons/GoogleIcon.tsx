@@ -1,8 +1,4 @@
-type IconProps = {
-    width: number;
-    height: number;
-    color?: string;
-};
+import type { IconProps } from "../../shared/types/iconTypes";
 
 const GoogleIcon = ({ width, height }: IconProps) => {
     return (

@@ -8,3 +8,11 @@
     display: flex;
     gap: 1rem;
 }
+
+.form > .form__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 1rem;
+}

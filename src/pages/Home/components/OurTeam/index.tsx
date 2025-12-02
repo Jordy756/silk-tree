@@ -7,11 +7,11 @@ const OurTeam = () => {
     return (
         <section id="our-team" className="our__team">
             <div>
-                <h3>{title}</h3>
+                <h2>{title}</h2>
                 <p>{description}</p>
             </div>
             {team.map(({ image, name, specialty }, index) => (
-                <OurTeamCard index={index} key={index} image={image} name={name} specialty={specialty} />
+                <OurTeamCard key={index} index={index} image={image} name={name} specialty={specialty} />
             ))}
         </section>
     );

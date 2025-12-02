@@ -1,5 +1,5 @@
 .footer {
-    padding: 1rem;
+    padding: 1rem 2.5rem 2.5rem;
     display: flex;
     flex-direction: column;
     gap: 5rem;
@@ -12,25 +12,25 @@
     gap: 2rem;
 }
 
+.footer > section {
+    flex-wrap: wrap;
+}
+
 .footer > section > div {
     display: flex;
+    align-items: start;
     flex-direction: column;
     gap: 1rem;
-    flex: 1;
-}
-
-.footer > section > nav {
-    flex: 1;
-}
-
-.footer > section > div > a {
-    display: flex;
-    width: fit-content;
+    flex: 200px 1;
 }
 
 .footer > section > div > a > img {
-    width: min(300px, 100%);
+    width: min(250px, 100vw);
     object-fit: contain;
+}
+
+.footer > section > nav {
+    flex: 200px 1;
 }
 
 .footer > section > nav > ul {
@@ -48,7 +48,7 @@
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.footer> section > nav > ul > li:not(:first-child) {
+.footer > section > nav > ul > li:not(:first-child) {
     border-top: 1px solid var(--neutral-900);
 }
 
@@ -58,16 +58,54 @@
 }
 
 .footer > section > nav > ul > li > span {
-    font-size: var(--text-size-large);
+    font-size: var(--text-size-medium);
     font-weight: 200;
 }
 
 .footer > section > nav > ul > li > a {
-    font-size: var(--text-size-huge);
+    font-size: var(--text-size-large);
     font-weight: 300;
+    text-align: start;
+}
+
+.footer > aside {
+    align-items: center;
+    flex-wrap: wrap-reverse;
 }
 
 .footer > aside > nav > ul {
     display: flex;
     gap: 1rem;
+}
+
+@media screen and (width <= 1542px) {
+    .footer {
+        padding: 1rem;
+    }
+}
+
+@media screen and (width <= 584px) {
+    .footer {
+        gap: 3rem;
+    }
+
+    .footer > section > div {
+        align-items: center;
+    }
+
+    .footer > section > div > blockquote {
+        text-align: center;
+    }
+
+    .footer > section > div > a {
+        justify-content: center;
+    }
+
+    .footer > aside {
+        justify-content: center;
+    }
+
+    .footer > aside > nav > ul > li {
+        text-align: center;
+    }
 }

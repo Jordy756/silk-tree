@@ -1,4 +1,3 @@
-import HorizontalScrollSection from "../../../../shared/components/HorizontalScrollSection";
 import AboutUsCard from "./AboutUsCard";
 import aboutUs from "../../data/aboutUs.json";
 import "./index.css";
@@ -6,20 +5,19 @@ import "./index.css";
 const AboutUs = () => {
     const { title, description, cards } = aboutUs;
     return (
-        <HorizontalScrollSection
-            id="about-us"
-            height="200dvh"
-            pinChildren={
+        <section id="about-us" className="about__us">
+            <div className="pin__wrap-sticky">
                 <header>
                     <h2>{title}</h2>
                     <p>{description}</p>
                 </header>
-            }
-        >
-            {cards.map(({ text, value }, index) => (
-                <AboutUsCard key={index} text={text} value={value} />
-            ))}
-        </HorizontalScrollSection>
+                <main className="pin__wrap">
+                    {cards.map(({ text, value }, index) => (
+                        <AboutUsCard key={index} text={text} value={value} />
+                    ))}
+                </main>
+            </div>
+        </section>
     );
 };
 

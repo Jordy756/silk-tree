@@ -21,5 +21,7 @@
 
 .form__separator > p {
     background-color: var(--neutral-50);
+    color: var(--neutral-500);
     padding-inline: 1rem;
+    font-weight: 300;
 }

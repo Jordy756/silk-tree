@@ -1,0 +1,388 @@
+.header {
+    position: fixed;
+    top: 2.5rem;
+    left: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    width: calc(100% - 5rem);
+    z-index: 10;
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.header > nav {
+    display: flex;
+    gap: 2rem;
+    transition: width 0.5s ease-in-out;
+}
+
+.header > nav > div {
+    display: flex;
+    align-items: stretch;
+    gap: 2.5rem;
+    width: 100%;
+}
+
+.header > nav > div > a {
+    height: 40px;
+    display: flex;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.header > nav > div > a > img {
+    object-fit: contain;
+}
+
+.header > nav > div > button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: none;
+    background-color: transparent;
+    transition: margin-left 0.5s ease-in-out;
+}
+
+.header > nav > div > button > div {
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.header > nav > div > button > div > span {
+    background-color: var(--neutral-900);
+    height: 2px;
+    transition: transform 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+}
+
+.header > nav > div > button > div > span:first-child {
+    width: 100%;
+}
+
+.header > nav > div > button > div > span:last-child {
+    width: 70%;
+}
+
+.header > nav > div > button > span {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.header > nav > ul {
+    margin: auto 0;
+    align-self: center;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    width: min(1100px, 100%);
+    padding-inline: 3rem;
+}
+
+.header > nav > ul > li::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--neutral-900);
+    transition: width 0.5s ease-in-out;
+}
+
+.header > nav > ul > li:hover::before {
+    width: 100%;
+}
+
+.header > nav > ul > li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    position: relative;
+    transition: opacity 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.header > nav > ul:hover > li {
+    opacity: 0.7;
+    color: var(--neutral-700);
+}
+
+.header > nav > ul > li:hover {
+    opacity: 1;
+    color: var(--neutral-900);
+}
+
+.header > nav > ul > li {
+    border-bottom: 1px solid var(--neutral-400);
+}
+
+.header > nav > ul > li > span {
+    font-size: var(--text-size-small);
+    font-weight: 300;
+}
+
+.header > nav > ul > li > a {
+    font-size: var(--text-size-huge);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.header > div {
+    display: flex;
+    position: relative;
+}
+
+.header > div > div > a {
+    display: none;
+}
+
+.header > div > div > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    aspect-ratio: 1;
+    border: 1px solid var(--neutral-900);
+    border-radius: 999999px;
+    background-color: transparent;
+}
+
+.header > div > div > ul::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    right: 15px;
+    width: 25px;
+    height: 20px;
+    background-color: var(--neutral-50);
+    box-shadow: var(--box-shadow);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.header > div > div > ul {
+    content: "";
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: -0.5rem;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 1rem;
+    width: 200px;
+    background-color: var(--neutral-50);
+    border-radius: var(--border-radius-out);
+    box-shadow: var(--box-shadow);
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height 0.3s ease-in-out, padding-block 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.header > div > div > ul.user__menu-open {
+    max-height: 250px;
+    padding-block: 0.5rem;
+    opacity: 1;
+    pointer-events: visible;
+}
+
+.header > div > div > ul > li > button {
+    padding: 0.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: none;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.navbar > div > div > ul > li > button:hover {
+    opacity: 0.7;
+}
+
+.header > div > span {
+    display: none;
+}
+
+.header > div > aside > ul {
+    display: none;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header > div > aside > ul > li {
+    padding: 2px 0;
+    border-bottom: 1px solid var(--neutral-900);
+}
+
+.header > aside {
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    transform: rotate(-90deg) translateY(-454px);
+    transform-origin: right top;
+    display: none;
+    align-items: center;
+    gap: 1rem;
+    text-transform: uppercase;
+}
+
+.header > aside > span {
+    height: 1px;
+    width: 435px;
+    background-color: var(--neutral-900);
+}
+
+/* NAVBAR OPEN */
+
+.header.with__navbar-open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    max-height: 100dvh;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--neutral-50);
+    padding: 2.5rem;
+    animation: showMenu 0.5s ease-in-out backwards;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.header.with__navbar-open > nav {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.header.with__navbar-open > nav > div > a {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.header.with__navbar-open > nav > div > button {
+    margin-left: calc(100% - 180px);
+}
+
+.header.with__navbar-open > nav > div > button > div > span {
+    width: 100%;
+    height: 5px;
+}
+
+.header.with__navbar-open > nav > div > button > div > span:first-child {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.header.with__navbar-open > nav > div > button > div > span:last-child {
+    transform: translateY(-5px) rotate(-45deg);
+}
+
+.header.with__navbar-open > nav > div > button > span {
+    opacity: 0;
+}
+
+.header.with__navbar-open > nav > ul {
+    display: flex;
+}
+
+.header.with__navbar-open > div {
+    width: 100%;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header.with__navbar-open > div > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header.with__navbar-open > div > div > a {
+    display: flex;
+    padding: 2px 0;
+    border-bottom: 1px solid var(--neutral-900);
+}
+
+.header.with__navbar-open > div > div > button {
+    display: none;
+}
+
+.header.with__navbar-open > div > div > ul {
+    display: none;
+}
+
+.header.with__navbar-open > div > span {
+    display: block;
+    margin: 0 auto;
+    width: 40px;
+    height: 1px;
+    background-color: var(--neutral-900);
+}
+
+.header.with__navbar-open > div > aside > ul {
+    display: flex;
+}
+
+.header.with__navbar-open > aside {
+    display: flex;
+}
+
+@media screen and (width <= 1542px) {
+    .header {
+        top: 1rem;
+        left: 1rem;
+        width: calc(100% - 2rem);
+    }
+}
+
+@media screen and (width <= 768px) {
+    .header.with__navbar-open {
+        padding: 1rem;
+    }
+
+    .header.with__navbar-open > nav > div > button {
+        margin-left: calc(100% - 165px);
+    }
+
+    .header.with__navbar-open > div > span,
+    .header.with__navbar-open > aside {
+        display: none;
+    }
+
+    .header > nav > ul {
+        padding-inline: 0;
+    }
+
+    .header > div {
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (width <= 480px) {
+    .header {
+        gap: 2rem;
+    }
+
+    .header > nav > div {
+        gap: 1.5rem;
+    }
+}
+
+@keyframes showMenu {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    20% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

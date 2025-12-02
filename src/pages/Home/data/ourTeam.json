@@ -3,49 +3,49 @@
     "description": "Conoce a nuestro equipo de profesionales de la salud",
     "team": [
         {
-            "image": "../../../../src/assets/images/doctors/doctorImg01.webp",
+            "image": "https://res.cloudinary.com/dygwpgeq9/image/upload/v1745285806/our_team_img_02_w9t0mu.webp",
             "name": "Dr. Juan Pérez",
             "specialty": "Cardiología"
         },
         {
-            "image": "../../../../src/assets/images/doctors/doctorImg02.webp",
+            "image": "https://res.cloudinary.com/dygwpgeq9/image/upload/v1745285806/our_team_img_01_kjgqna.webp",
             "name": "Dr. María Rodríguez",
             "specialty": "Pediatría"
         },
         {
-            "image": "../../../../src/assets/images/doctors/doctorImg03.webp",
+            "image": "https://res.cloudinary.com/dygwpgeq9/image/upload/v1745286041/our_team_img_09_rqrxbf.webp",
             "name": "Dr. Carlos Sánchez",
             "specialty": "Oncología"
         },
         {
-            "image": "../../../../src/assets/images/doctors/doctorImg04.webp",
+            "image": "https://res.cloudinary.com/dygwpgeq9/image/upload/v1745285806/our_team_img_07_rngvcv.webp",
             "name": "Dr. Ana Gómez",
             "specialty": "Ginecología"
         },
         {
-            "image": "../../../../src/assets/images/doctors/doctorImg05.webp",
+            "image": "https://res.cloudinary.com/dygwpgeq9/image/upload/v1745285806/our_team_img_05_pfs0qb.webp",
             "name": "Dr. José Martínez",
             "specialty": "Neurología"
         },
         {
-            "image": "../../../../src/assets/images/doctors/doctorImg06.webp",
+            "image": "https://res.cloudinary.com/dygwpgeq9/image/upload/v1745285806/our_team_img_08_rnt9ca.webp",
             "name": "Dr. Laura Pérez",
+            "specialty": "Endocrinología"
+        },
+        {
+            "image": "https://res.cloudinary.com/dygwpgeq9/image/upload/v1745286294/our_team_img_04_wqaexx.webp",
+            "name": "Dr. Ricardo Herrera",
             "specialty": "Dermatología"
         },
         {
-            "image": "../../../../src/assets/images/doctors/doctorImg07.webp",
-            "name": "Dr. Juan Pérez",
-            "specialty": "Cardiología"
+            "image": "https://res.cloudinary.com/dygwpgeq9/image/upload/v1745285806/our_team_img_03_izuqu4.webp",
+            "name": "Dra. Luisa Castro",
+            "specialty": "Reumatología"
         },
         {
-            "image": "../../../../src/assets/images/doctors/doctorImg08.webp",
-            "name": "Dr. María Rodríguez",
-            "specialty": "Pediatría"
-        },
-        {
-            "image": "../../../../src/assets/images/doctors/doctorImg09.webp",
-            "name": "Dr. Carlos Sánchez",
-            "specialty": "Oncología"
+            "image": "https://res.cloudinary.com/dygwpgeq9/image/upload/v1745285806/our_team_img_06_vfndde.webp",
+            "name": "Dra. Elena Morales",
+            "specialty": "Urología"
         }
     ]
 }

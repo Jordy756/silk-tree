@@ -1,32 +1,19 @@
 import "./index.css";
-import InputField from "../../../../shared/components/InputField";
-import { useForm } from "react-hook-form";
 import Form from "../../../../shared/components/Form";
-import Actionable from "../../../../shared/components/Actionable";
 import Separator from "../Separator";
 import GoogleIcon from "../../../../assets/icons/GoogleIcon";
+import Button from "../../../../shared/components/Button";
+import InputBox from "../../../../shared/components/InputBox";
+import { useRegisterUser } from "../../hooks/useRegisterUser";
+import { getRegisterFormValidation } from "../../utils/registerFormValidations";
 
-type RegisterProps = {
+type Props = {
     isToggled: boolean;
     handleIsToggled: () => void;
 };
 
-const Register = ({ isToggled, handleIsToggled }: RegisterProps) => {
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-        // reset,
-    } = useForm({
-        mode: "onBlur",
-        defaultValues: {
-            name: "",
-            lastName: "",
-            email: "",
-            password: "",
-            confirmPassword: "",
-        },
-    });
+const Register = ({ isToggled, handleIsToggled }: Props) => {
+    const { register, handleSubmit, errors, registerUser, registerUserWithGoogle } = useRegisterUser(handleIsToggled);
 
     return (
         <section className={`register ${!isToggled ? "active" : ""}`}>
@@ -35,98 +22,50 @@ const Register = ({ isToggled, handleIsToggled }: RegisterProps) => {
                 <p>Regístrate para acceder a todas las funciones</p>
             </header>
             <main>
-                <Form onSubmit={() => {}} handleSubmit={handleSubmit}>
+                <Form onSubmit={registerUser} handleSubmit={handleSubmit}>
                     <div className="input__box-container">
-                        <InputField
-                            typeField="input"
-                            name="name"
-                            labelText="Nombre"
-                            typeInput="text"
-                            register={register}
-                            validation={{
-                                required: { value: true, message: "El nombre es requerido" },
-                                minLength: { value: 3, message: "El nombre no puede tener menos de 3 caracteres" },
-                                maxLength: { value: 50, message: "El nombre no puede tener más de 50 caracteres" },
-                            }}
-                            error={errors.name}
-                        />
-                        <InputField
-                            typeField="input"
-                            name="lastName"
-                            labelText="Apellidos"
-                            typeInput="text"
-                            register={register}
-                            validation={{
-                                required: { value: true, message: "Los apellidos son requeridos" },
-                                minLength: { value: 3, message: "Los apellidos no pueden tener menos de 3 caracteres" },
-                                maxLength: { value: 50, message: "Los apellidos no pueden tener más de 50 caracteres" },
-                            }}
-                            error={errors.lastName}
-                        />
+                        <InputBox labelText="Nombre" error={errors.name}>
+                            <input
+                                placeholder=""
+                                type="text"
+                                {...register("name", getRegisterFormValidation("name"))}
+                            />
+                        </InputBox>
+                        <InputBox labelText="Apellidos" error={errors.lastName}>
+                            <input
+                                placeholder=""
+                                type="text"
+                                {...register("lastName", getRegisterFormValidation("lastName"))}
+                            />
+                        </InputBox>
                     </div>
-                    <InputField
-                        typeField="input"
-                        name="email"
-                        labelText="Correo electrónico"
-                        typeInput="text"
-                        register={register}
-                        validation={{
-                            required: { value: true, message: "El correo electrónico es requerido" },
-                            minLength: {
-                                value: 3,
-                                message: "El correo electrónico no puede tener menos de 3 caracteres",
-                            },
-                            maxLength: {
-                                value: 50,
-                                message: "El correo electrónico no puede tener más de 50 caracteres",
-                            },
-                            pattern: {
-                                value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/,
-                                message: "El correo electrónico no es válido",
-                            },
-                        }}
-                        error={errors.email}
-                    />
-                    <InputField
-                        typeField="input"
-                        name="password"
-                        labelText="Contraseña"
-                        typeInput="password"
-                        register={register}
-                        validation={{
-                            required: { value: true, message: "La contraseña es requerida" },
-                            minLength: { value: 8, message: "La contraseña no puede tener menos de 8 caracteres" },
-                            maxLength: { value: 50, message: "La contraseña no puede tener más de 50 caracteres" },
-                        }}
-                        error={errors.password}
-                    />
-                    <InputField
-                        typeField="input"
-                        name="confirmPassword"
-                        labelText="Confirmar contraseña"
-                        typeInput="password"
-                        register={register}
-                        validation={{
-                            required: { value: true, message: "La confirmación de la contraseña es requerida" },
-                            minLength: {
-                                value: 8,
-                                message: "La confirmación de la contraseña no puede tener menos de 8 caracteres",
-                            },
-                            maxLength: {
-                                value: 50,
-                                message: "La confirmación de la contraseña no puede tener más de 50 caracteres",
-                            },
-                        }}
-                        error={errors.confirmPassword}
-                    />
-                    <Actionable type="button" className="primary" buttonType="submit">
+                    <InputBox labelText="Correo electrónico" error={errors.email}>
+                        <input placeholder="" type="email" {...register("email", getRegisterFormValidation("email"))} />
+                    </InputBox>
+                    <InputBox labelText="Contraseña" error={errors.password}>
+                        <input
+                            placeholder=""
+                            type="password"
+                            autoComplete="off"
+                            {...register("password", getRegisterFormValidation("password"))}
+                        />
+                    </InputBox>
+                    <InputBox labelText="Confirmar contraseña" error={errors.confirmPassword}>
+                        <input
+                            placeholder=""
+                            type="password"
+                            autoComplete="off"
+                            {...register("confirmPassword", getRegisterFormValidation("confirmPassword"))}
+                        />
+                    </InputBox>
+                    <Button type="submit" className="primary">
                         Registrarse
-                    </Actionable>
+                    </Button>
                 </Form>
                 <Separator text="o registrate con" />
-                <Actionable type="button" className="secondary" buttonType="button">
-                    <GoogleIcon width={24} height={24} /> Registrarse con Google
-                </Actionable>
+                <Button type="button" className="secondary" onClick={() => registerUserWithGoogle()}>
+                    <GoogleIcon width={24} height={24} /> Google
+                </Button>
             </main>
             <footer>
                 <p>

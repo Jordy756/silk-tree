@@ -1,32 +1,26 @@
 [
     {
         "name": "Cardiología",
-        "image": "../../../src/assets/images/services/serviceImg01.webp",
-        "scrollTrigger": 83.33
+        "image": "https://res.cloudinary.com/dygwpgeq9/image/upload/v1745287823/service_img_01_qjsnhf.webp"
     },
     {
         "name": "Dermatología",
-        "image": "../../../src/assets/images/services/serviceImg02.webp",
-        "scrollTrigger": 66.67
+        "image": "https://res.cloudinary.com/dygwpgeq9/image/upload/v1745287822/service_img_02_pdqvvi.webp"
     },
     {
         "name": "Endocrinología",
-        "image": "../../../src/assets/images/services/serviceImg03.webp",
-        "scrollTrigger": 50
+        "image": "https://res.cloudinary.com/dygwpgeq9/image/upload/v1745287822/service_img_03_khuwkc.webp"
     },
     {
         "name": "Gastroenterología",
-        "image": "../../../src/assets/images/services/serviceImg04.webp",
-        "scrollTrigger": 33.33
+        "image": "https://res.cloudinary.com/dygwpgeq9/image/upload/v1745287821/service_img_05_qoxqgp.webp"
     },
     {
         "name": "Ginecología",
-        "image": "../../../src/assets/images/services/serviceImg05.webp",
-        "scrollTrigger": 16.67
+        "image": "https://res.cloudinary.com/dygwpgeq9/image/upload/v1745287822/service_img_04_i7pie5.webp"
     },
     {
         "name": "Otorrinolaringología",
-        "image": "../../../src/assets/images/services/serviceImg06.webp",
-        "scrollTrigger": 0
+        "image": "https://res.cloudinary.com/dygwpgeq9/image/upload/v1745287821/service_img_06_peoqp2.webp"
     }
 ]

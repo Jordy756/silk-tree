@@ -41,9 +41,13 @@
     transform: translateY(-50%) rotate(-180deg);
 }
 
-.faq__item > summary > h5,
+.faq__item > summary > h3,
 .faq__item > p {
     margin-left: calc(25px + 1rem);
+}
+
+.faq__item > summary > h3 {
+    font-size: var(--text-size-small);
 }
 
 @supports (interpolate-size: allow-keywords) {

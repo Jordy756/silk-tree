@@ -36,6 +36,10 @@
     gap: 0.5rem;
 }
 
+.register > header > h2 {
+    font-size: var(--text-size-large);
+}
+
 .register > main {
     gap: 1rem;
 }
@@ -45,4 +49,18 @@
     margin-left: 0.5rem;
     background-color: transparent;
     color: var(--primary-500);
+}
+
+@media screen and (width <= 768px) {
+    .register {
+        width: 100%;
+        flex: none;
+        opacity: 0;
+        transform: translateX(100%) translateY(0);
+    }
+
+    .register.active {
+        opacity: 1;
+        transform: translateX(-100%) translateX(0);
+    }
 }

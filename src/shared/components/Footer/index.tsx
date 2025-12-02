@@ -1,43 +1,36 @@
-import Actionable from "../Actionable";
-import logo from "../../../assets/images/company/logo.png";
+import { Link } from "react-router-dom";
+import NavigationLink from "../NavigationLink";
+import { useAuthStatus } from "../../hooks/useAuthStatus";
+import basics from "../../data/basics.json";
 import "./index.css";
-import { NavLink } from "react-router-dom";
 
 const Footer = () => {
+    const { isAuthenticated } = useAuthStatus();
+    const { logo, slogan, footerNavigation } = basics;
+
     return (
         <footer className="footer">
             <section>
                 <div>
-                    <NavLink to="/#home">
-                        <img src={logo} alt="Logo SilkTree" />
-                    </NavLink>
-                    <blockquote>Cuidando tu salud con confianza y dedicación</blockquote>
-                    <Actionable type="CTA" className="primary" to="/#">
-                        Get Started
-                    </Actionable>
+                    <Link to="/#home">
+                        <img src={logo} alt="Logo de SilkTree" loading="lazy" decoding="async" />
+                    </Link>
+                    <blockquote>{slogan}</blockquote>
+                    <NavigationLink
+                        className="primary"
+                        to={isAuthenticated ? "/schedule-appointment" : "/authorization"}
+                    >
+                        {isAuthenticated ? "Agendar cita" : "Comenzar"}
+                    </NavigationLink>
                 </div>
                 <nav>
                     <ul>
-                        <li>
-                            <span>01</span>
-                            <a href="/#about-us">Sobre nosotros</a>
-                        </li>
-                        <li>
-                            <span>02</span>
-                            <a href="/#services">Servicios</a>
-                        </li>
-                        <li>
-                            <span>03</span>
-                            <a href="/#">Medicos</a>
-                        </li>
-                        <li>
-                            <span>04</span>
-                            <a href="/#FAQs">Preguntas frecuentes</a>
-                        </li>
-                        <li>
-                            <span>05</span>
-                            <a href="/#contact-us">Contactanos</a>
-                        </li>
+                        {footerNavigation.map(({ label, path }, index) => (
+                            <li key={index}>
+                                <span>{(index + 1 + "").padStart(2, "0")}</span>
+                                <Link to={path}>{label}</Link>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
             </section>
@@ -46,10 +39,10 @@ const Footer = () => {
                 <nav>
                     <ul>
                         <li>
-                            <NavLink to="/#">Términos y condiciones</NavLink>
+                            <Link to="/#">Términos y condiciones</Link>
                         </li>
                         <li>
-                            <NavLink to="/#">Política de privacidad</NavLink>
+                            <Link to="/#">Política de privacidad</Link>
                         </li>
                     </ul>
                 </nav>

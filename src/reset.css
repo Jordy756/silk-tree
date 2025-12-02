@@ -141,7 +141,16 @@ button {
 
 button,
 input,
-textarea {
+textarea,
+select {
+    line-height: inherit;
     font-family: inherit;
     font-size: inherit;
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
 }

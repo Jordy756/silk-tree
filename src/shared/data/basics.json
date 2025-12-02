@@ -1,10 +1,57 @@
 {
     "name": ["Silk", "Tree"],
+    "logo": "/logo.webp",
+    "slogan": "Cuidando tu salud con confianza y dedicación",
     "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni aut ab, corporis reiciendis labore rem nihil necessitatibus consectetur expedita nostrum, possimus sint nisi, a rerum sapiente suscipit sequi omnis porro!",
-    "award": {
-        "name": "Hospital #1 de Costa Rica",
-        "date": "2024-07-10",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nihil harum magnam nulla, amet, omnis deleniti unde aut, assumenda impedit odio provident repudiandae. Ipsum atque culpa labore nemo aliquam sequi."
-    },
-    "marquee": ["Nuestros servicios", "Equipo de profesionales", "Tecnología de punta", "Ambiente seguro"]
+    "marquee": ["Nuestros servicios", "Equipo de profesionales", "Tecnología de punta", "Ambiente seguro"],
+    "socialNetworks": [
+        {
+            "name": "Github",
+            "url": "https://github.com/Jordy1756"
+        },
+        {
+            "name": "Linkedin",
+            "url": "https://www.linkedin.com/in/yordicastro"
+        },
+        {
+            "name": "Portafolio",
+            "url": "https://jordy756-minimalist-portfolio.vercel.app"
+        }
+    ],
+    "navbarNavigation": [
+        {
+            "label": "Home",
+            "path": "/#home"
+        },
+        {
+            "label": "Sobre nosotros",
+            "path": "/#about-us"
+        },
+        {
+            "label": "Servicios",
+            "path": "/#services"
+        },
+        {
+            "label": "Médicos",
+            "path": "/#our-team"
+        }
+    ],
+    "footerNavigation": [
+        {
+            "label": "Sobre nosotros",
+            "path": "/#about-us"
+        },
+        {
+            "label": "Servicios",
+            "path": "/#services"
+        },
+        {
+            "label": "Médicos",
+            "path": "/#our-team"
+        },
+        {
+            "label": "FAQ",
+            "path": "/#FAQs"
+        }
+    ]
 }

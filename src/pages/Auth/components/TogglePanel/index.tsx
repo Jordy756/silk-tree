@@ -1,19 +1,23 @@
 import "./index.css";
-import imgTest from "../../../../assets/images/services/serviceImg01.webp";
-import ArrowLeftIcon from "../../../../assets/icons/ArrowLeft";
-import ArrowRightIcon from "../../../../assets/icons/ArrowRight";
+import ArrowLeftIcon from "../../../../assets/icons/ArrowLeftIcon";
+import ArrowRightIcon from "../../../../assets/icons/ArrowRightIcon";
 import useTestimonies from "../../hooks/useTestimonies";
 
-type TogglePanelProps = {
+type Props = {
     isToggled: boolean;
 };
 
-const TogglePanel = ({ isToggled }: TogglePanelProps) => {
+const TogglePanel = ({ isToggled }: Props) => {
     const { testimonies, activeTestimonyId, handleNextTestimony, handlePrevTestimony } = useTestimonies();
 
     return (
         <div className={`toggle__panel ${isToggled ? "toggled" : ""}`}>
-            <img src={imgTest} alt="" loading="lazy" decoding="async" />
+            <img
+                src="https://res.cloudinary.com/dygwpgeq9/image/upload/v1745287823/service_img_01_qjsnhf.webp"
+                alt="Persona sosteniendo una muestra en un tuvo de laboratorio"
+                loading="lazy"
+                decoding="async"
+            />
             <div className="testimonies">
                 <ul>
                     {testimonies.map(({ id, name, opinion }) => (

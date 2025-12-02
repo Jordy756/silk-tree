@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { useAuthStatus } from "../../hooks/useAuthStatus";
-import { useNavbar } from "../../hooks/useNavbar";
-import AvatarIcon from "../../../assets/icons/AvatarIcon";
-import LogoutIcon from "../../../assets/icons/LogoutIcon";
-import basics from "../../data/basics.json";
+import { useAuthStatus } from "@hooks/useAuthStatus";
+import { useNavbar } from "@hooks/useNavbar";
+import AvatarIcon from "@icons/AvatarIcon";
+import LogoutIcon from "@icons/LogoutIcon";
+import basics from "@data/basics.json";
 import "./index.css";
 
 const Header = () => {

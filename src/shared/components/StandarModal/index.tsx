@@ -1,6 +1,6 @@
 import { ReactNode, RefObject } from "react";
-import CloseIcon from "../../../assets/icons/CloseIcon";
-import Button from "../Button";
+import CloseIcon from "@icons/CloseIcon";
+import Button from "@components/Button";
 import "./index.css";
 
 type Props = {

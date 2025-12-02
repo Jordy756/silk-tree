@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import NavigationLink from "../NavigationLink";
-import { useAuthStatus } from "../../hooks/useAuthStatus";
-import basics from "../../data/basics.json";
+import NavigationLink from "@components/NavigationLink";
+import { useAuthStatus } from "@hooks/useAuthStatus";
+import basics from "@data/basics.json";
 import "./index.css";
 
 const Footer = () => {

@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AuthStatusProvider } from "./shared/context/authStatusContext";
-import Auth from "./modules/Auth";
-import Home from "./modules/Home";
-import ScheduleAppointment from "./modules/MedicalAppointment";
+import Auth from "./features/auth";
+import Home from "./features/home";
+import ScheduleAppointment from "./features/medicalAppointment";
 import Layout from "./shared/layouts/Layout";
 import { ToastProvider } from "./shared/context/toastContext";
 

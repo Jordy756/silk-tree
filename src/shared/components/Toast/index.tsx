@@ -1,12 +1,12 @@
-import { getFormattedDateString, TIME_12_FORMAT } from "../../utils/handleDates";
-import { useToast } from "../../hooks/useToast";
+import { getFormattedDateString, TIME_12_FORMAT } from "@utils/handleDates";
+import { useToast } from "@hooks/useToast";
 import { ToastProps } from "../../types/toastTypes";
-import CloseIcon from "../../../assets/icons/CloseIcon";
-import SuccessIcon from "../../../assets/icons/SuccessIcon";
-import Button from "../Button";
-import ErrorIcon from "../../../assets/icons/ErrorIcon";
-import WarningIcon from "../../../assets/icons/WarningIcon";
-import InfoIcon from "../../../assets/icons/InfoIcon";
+import CloseIcon from "@icons/CloseIcon";
+import SuccessIcon from "@icons/SuccessIcon";
+import Button from "@components/Button";
+import ErrorIcon from "@icons/ErrorIcon";
+import WarningIcon from "@icons/WarningIcon";
+import InfoIcon from "@icons/InfoIcon";
 import "./index.css";
 
 const Toast = ({ id, title, type, message, removing }: ToastProps) => {

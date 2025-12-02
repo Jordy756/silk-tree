@@ -1,5 +1,5 @@
 import { RefObject } from "react";
-import Button from "../Button";
+import Button from "@components/Button";
 import "./index.css";
 
 type Props = {

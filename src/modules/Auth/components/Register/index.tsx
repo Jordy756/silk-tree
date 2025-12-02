@@ -58,21 +58,19 @@ const Register = ({ isToggled, handleIsToggled }: Props) => {
                             {...register("confirmPassword", getRegisterFormValidation("confirmPassword"))}
                         />
                     </InputBox>
-                    <Button type="submit" className="primary">
+                    <Button variant="primary" type="submit">
                         Registrarse
                     </Button>
                 </Form>
                 <Separator text="o registrate con" />
-                <Button type="button" className="secondary" onClick={() => registerUserWithGoogle()}>
+                <Button variant="secondary" onClick={() => registerUserWithGoogle()}>
                     <GoogleIcon width={24} height={24} /> Google
                 </Button>
             </main>
             <footer>
                 <p>
                     Ya tienes cuenta?
-                    <button type="button" onClick={handleIsToggled}>
-                        Inicia sesion
-                    </button>
+                    <button onClick={handleIsToggled}>Inicia sesion</button>
                 </p>
             </footer>
         </section>

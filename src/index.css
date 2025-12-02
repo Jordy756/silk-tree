@@ -50,14 +50,6 @@
     interpolate-size: allow-keywords;
 }
 
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
@@ -81,8 +73,6 @@ body {
     break-after: avoid-page;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    font-kerning: normal;
-    font-feature-settings: "liga" 1, "dlig" 1, "kern" 1;
 }
 
 p,
@@ -92,10 +82,6 @@ blockquote {
     line-height: 1.75;
     text-wrap: pretty;
     max-width: 65ch;
-    font-kerning: normal;
-    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 .root > .main__content {

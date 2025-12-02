@@ -1,4 +1,22 @@
 {
     "files": [],
+    "compilerOptions": {
+        "strict": true,
+        "baseUrl": ".",
+        "paths": {
+            "@components/*": ["src/shared/components/*"],
+            "@hooks/*": ["src/shared/hooks/*"],
+            "@services/*": ["src/shared/services/*"],
+            "@entities/*": ["src/shared/entities/*"],
+            "@stores/*": ["src/shared/stores/*"],
+            "@utils/*": ["src/shared/utils/*"],
+            "@constants/*": ["src/shared/constants/*"],
+            "@schemas/*": ["src/shared/schemas/*"],
+            "@types/*": ["src/shared/types/*"],
+            "@icons/*": ["src/shared/components/icons/*"],
+            "@images/*": ["assets/images/*"],
+            "@features/*": ["src/features/*"]
+        }
+    },
     "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }]
 }

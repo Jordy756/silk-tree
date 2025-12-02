@@ -25,7 +25,7 @@ const Toast = ({ id, title, type, message, removing }: ToastProps) => {
             <div className="main__content">
                 <header>
                     <h6>{title}</h6>
-                    <Button type="button" className="icon" onClick={() => removeToast(id || "")}>
+                    <Button variant="icon" onClick={() => removeToast(id || "")}>
                         <CloseIcon width={24} height={24} color="var(--neutral-900)" />
                     </Button>
                 </header>

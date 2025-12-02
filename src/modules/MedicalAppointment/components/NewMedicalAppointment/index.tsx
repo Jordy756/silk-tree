@@ -10,10 +10,10 @@ const NewMedicalAppointment = () => {
 
     return (
         <MedicalAppointmentForm onSubmit={insertMedicalAppointment}>
-            <Button type="submit" className="primary">
+            <Button type="submit" variant="primary">
                 Agendar
             </Button>
-            <Button type="reset" className="secondary" onClick={() => closeModal()}>
+            <Button type="reset" variant="secondary" onClick={closeModal}>
                 Cancelar
             </Button>
         </MedicalAppointmentForm>

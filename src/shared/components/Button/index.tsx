@@ -1,16 +1,13 @@
-import { ReactNode } from "react";
+import { ButtonHTMLAttributes } from "react";
 import "./index.css";
 
-type Props = {
-    className: "primary" | "secondary" | "icon";
-    type: "button" | "submit" | "reset";
-    onClick?: () => void;
-    children: ReactNode;
-};
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
+    variant: "primary" | "secondary" | "icon";
+}
 
-const Button = ({ className, type: buttonType, onClick, children }: Props) => {
+const Button = ({ variant, className = "", children, ...props }: Props) => {
     return (
-        <button type={buttonType} className={className} onClick={onClick}>
+        <button className={`${variant} ${className}`} {...props}>
             {children}
         </button>
     );

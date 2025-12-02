@@ -16,8 +16,7 @@ const ConfirmationModal = ({ dialogRef, message, primaryButtonText, onConfirm, c
             <h5>{message}</h5>
             <div>
                 <Button
-                    type="button"
-                    className="primary"
+                    variant="primary"
                     onClick={() => {
                         onConfirm();
                         closeModal();
@@ -25,7 +24,7 @@ const ConfirmationModal = ({ dialogRef, message, primaryButtonText, onConfirm, c
                 >
                     {primaryButtonText}
                 </Button>
-                <Button type="button" className="secondary" onClick={closeModal}>
+                <Button variant="secondary" onClick={closeModal}>
                     Cancelar
                 </Button>
             </div>

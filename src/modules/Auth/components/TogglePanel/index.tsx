@@ -34,10 +34,10 @@ const TogglePanel = ({ isToggled }: Props) => {
                         ))}
                     </ul>
                     <div>
-                        <button type="button" aria-label="Testimonio anterior" onClick={handlePrevTestimony}>
+                        <button aria-label="Testimonio anterior" onClick={handlePrevTestimony}>
                             <ArrowLeftIcon width={24} height={24} color="var(--neutral-50)" />
                         </button>
-                        <button type="button" aria-label="Siguiente testimonio" onClick={handleNextTestimony}>
+                        <button aria-label="Siguiente testimonio" onClick={handleNextTestimony}>
                             <ArrowRightIcon width={24} height={24} color="var(--neutral-50)" />
                         </button>
                     </div>

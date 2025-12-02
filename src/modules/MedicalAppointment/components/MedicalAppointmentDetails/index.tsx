@@ -16,12 +16,11 @@ const MedicalAppointmentDetails = () => {
 
     return (
         <MedicalAppointmentForm isNonEditable={isEditMode} onSubmit={updateMedicalAppointment}>
-            <Button type={!isEditMode ? "button" : "submit"} className="primary" onClick={() => handleIsEditMode()}>
+            <Button type={!isEditMode ? "button" : "submit"} variant="primary" onClick={handleIsEditMode}>
                 {isEditMode ? "Editar" : "Actualizar"}
             </Button>
             <Button
-                type="button"
-                className="secondary"
+                variant="secondary"
                 onClick={() =>
                     isEditMode ? showModal("Estas seguro?", "Eliminar", deleteMedicalAppointment) : handleIsEditMode()
                 }

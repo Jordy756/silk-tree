@@ -37,21 +37,19 @@ const Login = ({ isToggled, handleIsToggled }: Props) => {
                         </InputBox>
                         <p className="forgot__password">Olvido su contraseña</p>
                     </div>
-                    <Button className="primary" type="submit">
+                    <Button type="submit" variant="primary">
                         Iniciar sesión
                     </Button>
                 </Form>
                 <Separator text="O inicia sesión con" />
-                <Button className="secondary" type="button" onClick={() => loginUserWithGoogle()}>
+                <Button variant="secondary" onClick={() => loginUserWithGoogle()}>
                     <GoogleIcon width={24} height={24} /> Google
                 </Button>
             </main>
             <footer>
                 <p>
                     ¿No tienes una cuenta?
-                    <button type="button" onClick={handleIsToggled}>
-                        Registrate
-                    </button>
+                    <button onClick={handleIsToggled}>Registrate</button>
                 </p>
             </footer>
         </section>

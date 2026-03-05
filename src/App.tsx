@@ -12,10 +12,10 @@ const App = () => {
             <AuthStatusProvider>
                 <BrowserRouter>
                     <Routes>
-                        <Route path="/authorization" element={<Auth />} />
+                        {/* <Route path="/authorization" element={<Auth />} /> */}
                         <Route element={<Layout />}>
                             <Route path="/" element={<Home />} />
-                            <Route path="/schedule-appointment" element={<ScheduleAppointment />} />
+                            {/* <Route path="/schedule-appointment" element={<ScheduleAppointment />} /> */}
                         </Route>
                     </Routes>
                 </BrowserRouter>

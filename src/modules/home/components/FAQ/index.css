@@ -1,0 +1,21 @@
+.faq {
+  padding: 1rem 2.5rem;
+}
+
+.faq,
+.faq > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq > h2 {
+  text-transform: uppercase;
+  font-size: var(--text-size-xlarge);
+}
+
+@media screen and (width <= 1542px) {
+  .faq {
+    padding: 1rem;
+  }
+}

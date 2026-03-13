@@ -1,0 +1,39 @@
+.standard__modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  border: none;
+  scale: 0;
+  transition:
+    scale 0.2s ease-in-out,
+    display 0.3s ease-in allow-discrete;
+  width: min(90%, 500px);
+  background-color: var(--neutral-50);
+}
+
+.standard__modal[open] {
+  scale: 1;
+}
+
+.standard__modal > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: var(--primary-500);
+  color: var(--neutral-50);
+}
+
+.standard__modal > main {
+  padding: 1rem;
+}
+
+@starting-style {
+  .standard__modal[open] {
+    scale: 0;
+  }
+}

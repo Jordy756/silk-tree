@@ -1,0 +1,30 @@
+{
+  "title": "Sobre nosotros",
+  "description": "En SilkTree, nos dedicamos a proporcionar atención médica de la más alta calidad a nuestros pacientes. Con tecnología de vanguardia y un equipo de profesionales altamente capacitados, estamos comprometidos a mejorar la salud y el bienestar de nuestra comunidad.",
+  "cards": [
+    {
+      "text": "Clientes satisfechos",
+      "value": "1000"
+    },
+    {
+      "text": "Atención de emergencias",
+      "value": "24/7"
+    },
+    {
+      "text": "Profesionales",
+      "value": "100"
+    },
+    {
+      "text": "Años de experiencia",
+      "value": "+10"
+    },
+    {
+      "text": "Clínicas",
+      "value": "+5"
+    },
+    {
+      "text": "Especialidades",
+      "value": "10"
+    }
+  ]
+}

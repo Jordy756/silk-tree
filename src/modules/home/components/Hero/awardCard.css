@@ -1,0 +1,45 @@
+.award__card {
+  padding: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-radius: 25px 25px 0 0;
+  background-color: var(--glass-color-light);
+  backdrop-filter: var(--blur-effect-light);
+  box-shadow: var(--box-shadow);
+}
+
+.award__card > div {
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+}
+
+.award__card > div > span {
+  font-size: var(--text-size-xlarge);
+}
+
+.award__card > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.award__card > div > div > h3 {
+  font-size: var(--text-size-large);
+}
+
+.award__card > div > div > time {
+  opacity: 0.8;
+}
+
+.award__card > p {
+  max-width: 50ch;
+}
+
+@media screen and (width <= 1542px) {
+  .award__card {
+    padding: 1rem;
+  }
+}

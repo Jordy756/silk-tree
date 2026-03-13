@@ -4,15 +4,15 @@
 // import { ToastProvider } from "./shared/context/toastContext";
 // import Layout from "./shared/layouts/Layout";
 
+import { Home } from "@modules/home/pages/Home.tsx";
+import { MainLayout } from "@shared/components/layout/MainLayout";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "@features/home";
-import Layout from "@shared/components/layout/Layout";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Layout />}>
+        <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
         </Route>
       </Routes>

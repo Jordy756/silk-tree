@@ -1,42 +1,35 @@
 {
-    "compilerOptions": {
-        "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-        "target": "ES2020",
-        "useDefineForClassFields": true,
-        "lib": ["ES2020", "DOM", "DOM.Iterable"],
-        "module": "ESNext",
-        "skipLibCheck": true,
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2023",
+    "useDefineForClassFields": true,
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "types": ["vite/client"],
+    "skipLibCheck": true,
 
-        /* Bundler mode */
-        "moduleResolution": "bundler",
-        "allowImportingTsExtensions": true,
-        "isolatedModules": true,
-        "moduleDetection": "force",
-        "noEmit": true,
-        "jsx": "react-jsx",
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
 
-        /* Linting */
-        "strict": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "noFallthroughCasesInSwitch": true,
-        "noUncheckedSideEffectImports": true,
-        "baseUrl": ".",
-        "paths": {
-            "@components/*": ["src/shared/components/*"],
-            "@constants/*": ["src/shared/constants/*"],
-            "@data/*": ["src/shared/data/*"],
-            "@hooks/*": ["src/shared/hooks/*"],
-            "@layouts/*": ["src/shared/layouts/*"],
-            "@services/*": ["src/shared/services/*"],
-            "@entities/*": ["src/shared/entities/*"],
-            "@stores/*": ["src/shared/stores/*"],
-            "@utils/*": ["src/shared/utils/*"],
-            // "@types/*": ["src/shared/types/*"],
-            "@icons/*": ["src/shared/components/icons/*"],
-            // "@images/*": ["assets/images/*"],
-            "@features/*": ["src/features/*"]
-        }
-    },
-    "include": ["src"]
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+
+    /* Path aliases */
+    "baseUrl": ".",
+    "paths": {
+      "@shared/*": ["src/shared/*"],
+      "@features/*": ["src/features/*"]
+    }
+  },
+  "include": ["src"]
 }

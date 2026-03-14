@@ -1,120 +1,120 @@
 .toasts__container {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    z-index: 999;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 999;
 }
 
 .toasts__container.active {
-    padding: 1rem;
-    width: min(382px, 100%);
+  padding: 1rem;
+  width: min(382px, 100%);
 }
 
 .toast {
-    padding: 0.5rem;
-    display: flex;
-    gap: 0.5rem;
-    border-radius: var(--border-radius-out);
-    background-color: var(--neutral-50);
-    box-shadow: var(--box-shadow);
-    overflow: hidden;
-    position: relative;
-    animation: slide-in 0.3s ease-out;
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  border-radius: var(--border-radius-out);
+  background-color: var(--neutral-50);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  position: relative;
+  animation: slide-in 0.3s ease-out;
 }
 
 .toast > .main__content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .toast > .main__content > header {
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
-    gap: 0.5rem;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 0.5rem;
 }
 
 .toast > .main__content > header > picture {
-    display: flex;
+  display: flex;
 }
 
 .toast > .main__content > header > h6 {
-    font-size: var(--text-size-base);
+  font-size: var(--text-size-base);
 }
 
 .toast > .main__content > main > p {
-    font-size: 0.9rem;
-    opacity: 0.75;
-    font-weight: 300;
+  font-size: 0.9rem;
+  opacity: 0.75;
+  font-weight: 300;
 }
 
 .toast > .main__content > footer > p {
-    font-size: 0.8rem;
-    opacity: 0.75;
-    font-weight: 200;
+  font-size: 0.8rem;
+  opacity: 0.75;
+  font-weight: 200;
 }
 
 .toast .progress__bar {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 4px;
-    background-color: var(--success-500);
-    animation: shrink 7.5s linear forwards;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background-color: var(--success-500);
+  animation: shrink 7.5s linear forwards;
 }
 
 .toast__success .progress__bar {
-    background-color: var(--success-500);
+  background-color: var(--success-500);
 }
 
 .toast__error .progress__bar {
-    background-color: var(--error-500);
+  background-color: var(--error-500);
 }
 
 .toast__warning .progress__bar {
-    background-color: var(--warning-500);
+  background-color: var(--warning-500);
 }
 
 .toast__info .progress__bar {
-    background-color: var(--info-500);
+  background-color: var(--info-500);
 }
 
 .toast.removing {
-    animation: slide-out 0.3s ease-out forwards;
+  animation: slide-out 0.3s ease-out forwards;
 }
 
 @keyframes shrink {
-    from {
-        width: 100%;
-    }
-    to {
-        width: 0%;
-    }
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
 }
 
 @keyframes slide-in {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slide-out {
-    from {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    to {
-        transform: translateX(100%);
-        opacity: 0;
-    }
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
 }

@@ -22,6 +22,31 @@
   --primary-900: #1e1368;
 
   --font-poppins: "Poppins";
+
+  --max-width: 1542px;
+
+  /* Animations */
+  --animate-marquee: scrollLeft 60s linear infinite;
+
+  @keyframes scrollLeft {
+    to {
+      transform: translateX(calc(-100% - 5rem));
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-neutral-50 text-neutral-950 font-poppins text-pretty;
+  }
+
+  :is(h1, h2, h3, h4, h5, h6) {
+    @apply text-balance;
+  }
+
+  .root {
+    @apply flex flex-col min-h-dvh overflow-clip;
+  }
 }
 
 @layer components {
@@ -34,32 +59,6 @@
   }
 }
 
-/*
-@layer base {
-   Estilos globales del HTML, body, headings 
-  body {
-    @apply font-sans text-gray-800;
-  }
-  h1,
-  h2,
-  h3 {
-    @apply font-heading font-bold;
-  }
-}
-
-*/
-
-/*
-@layer components {
-   Clases reutilizables — úsalas con className="btn-primary" 
-  .btn-primary {
-    @apply bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition;
-  }
-  .card {
-    @apply bg-white rounded-xl shadow-md p-6;
-  }
-}
-*/
 /* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {

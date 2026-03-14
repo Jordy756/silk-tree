@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import Marquee from "../Marquee";
+import Marquee from "../Marquee/Marquee";
 import ServiceCard from "./ServiceCard";
 import basics from "../../../../shared/data/basics.json";
 import services from "../../data/services.json";

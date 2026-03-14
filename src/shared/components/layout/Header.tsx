@@ -34,7 +34,11 @@ export const Header = () => {
         </button>
       </nav>
 
-      <div id="menu" className="fixed top-0 left-0 w-full h-full p-10" popover="auto">
+      <div
+        id="menu"
+        popover="auto"
+        className="fixed top-0 left-0 w-full h-full p-10 -translate-x-full open:translate-x-0 transition-[translate,display,overlay,opacity] transition-discrete duration-500 ease-in-out starting:open:-translate-x-full"
+      >
         <nav className="flex flex-col justify-between h-full">
           <div className="flex items-center justify-between gap-8">
             <span className="realtive -rotate-90 after:absolute after:bottom-1/2 after:right-[calc(100%+8px)] after:h-px after:w-[50vh] after:bg-neutral-950 after:-translate-y-1/2 uppercase">
@@ -50,7 +54,7 @@ export const Header = () => {
                 key={index}
                 className="relative flex items-center gap-4 border-b border-neutral-200 before:absolute before:left-0 before:bottom-0 before:h-px before:w-0 before:bg-neutral-950 before:transition-[width] before:duration-300 hover:before:w-full"
               >
-                <span className="min-w-7 text-size-small">{(index + 1 + "").padStart(2, "0")}</span>
+                <span className="min-w-7 text-size-small font-light">{(index + 1 + "").padStart(2, "0")}</span>
                 <Link to={path} className="font-medium text-size-huge uppercase">
                   {label}
                 </Link>

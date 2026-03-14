@@ -1,4 +1,4 @@
-import { FieldError } from "react-hook-form";
+import type { FieldError } from "react-hook-form";
 import type { ReactElement, JSX } from "react";
 
 export type Props = {

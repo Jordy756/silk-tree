@@ -5,20 +5,20 @@ import { useMedicalAppointments } from "./useMedicalAppointments";
 import { getDefaultFormValues } from "../utils/handleAppointmentForm";
 
 export const useMedicalAppointmentForm = () => {
-    const { currentMedicalAppointment } = useMedicalAppointments();
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-        reset,
-    } = useForm<MedicalAppointmentFormValues>({
-        mode: "onBlur",
-        defaultValues: getDefaultFormValues(currentMedicalAppointment),
-    });
+  const { currentMedicalAppointment } = useMedicalAppointments();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<MedicalAppointmentFormValues>({
+    mode: "onBlur",
+    defaultValues: getDefaultFormValues(currentMedicalAppointment),
+  });
 
-    useEffect(() => {
-        reset(getDefaultFormValues(currentMedicalAppointment));
-    }, [currentMedicalAppointment.start, currentMedicalAppointment.end, currentMedicalAppointment.specialty, reset]);
+  useEffect(() => {
+    reset(getDefaultFormValues(currentMedicalAppointment));
+  }, [currentMedicalAppointment.start, currentMedicalAppointment.end, currentMedicalAppointment.specialty, reset]);
 
-    return { register, handleSubmit, errors };
+  return { register, handleSubmit, errors };
 };

@@ -1,5 +1,5 @@
 import { createContext, type ReactNode, useCallback, useRef, useState } from "react";
-import ConfirmationModal from "../components/ui/ConfirmationModal";
+import ConfirmationModal from "../components/ui/Confirmation";
 
 type ConfirmationModalContextType = {
   message: string;

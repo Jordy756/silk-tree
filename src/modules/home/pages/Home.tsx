@@ -8,8 +8,9 @@ import basics from "@shared/data/basics.json";
 // import { useLocation } from "react-router-dom";
 // import { useEffect } from "react";
 
-import { Hero } from "@modules/home/components/Hero/Hero.tsx";
+// import { Hero } from "@modules/home/components/Hero/Hero.tsx";
 import { Marquee } from "@modules/home/components/Marquee/Marquee.tsx";
+import { FAQ } from "@modules/home/components/FAQ/FAQ.tsx";
 // import { NavigationLink } from "@shared/components/ui/NavigationLink";
 
 export const Home = () => {
@@ -26,8 +27,9 @@ export const Home = () => {
 
   return (
     <>
-      <Hero />
+      {/* <Hero /> */}
       <Marquee list={marquee} />
+      <FAQ />
       {/* 
             
             <AboutUs />

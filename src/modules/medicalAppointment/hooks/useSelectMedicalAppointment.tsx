@@ -4,13 +4,13 @@ import MedicalAppointmentDetails from "../components/MedicalAppointmentDetails";
 import { MedicalAppointment } from "../entities/MedicalAppointment";
 
 export const useSelectMedicalAppointment = () => {
-    const { showModal } = useStandardModal();
-    const { handleCurrentMedicalAppointment } = useMedicalAppointments();
+  const { showModal } = useStandardModal();
+  const { handleCurrentMedicalAppointment } = useMedicalAppointments();
 
-    const selectMedicalAppointment = (medicalAppointment: MedicalAppointment) => {
-        handleCurrentMedicalAppointment(medicalAppointment);
-        showModal("Detalles de la cita", <MedicalAppointmentDetails />);
-    };
+  const selectMedicalAppointment = (medicalAppointment: MedicalAppointment) => {
+    handleCurrentMedicalAppointment(medicalAppointment);
+    showModal("Detalles de la cita", <MedicalAppointmentDetails />);
+  };
 
-    return { selectMedicalAppointment };
+  return { selectMedicalAppointment };
 };

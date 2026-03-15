@@ -1,16 +1,10 @@
-import { getFormattedDateString, TIME_12_FORMAT } from "@utils/handleDates";
-import { useToast } from "@hooks/useToast";
-import { ToastProps } from "../../types/toastTypes";
-import CloseIcon from "@icons/CloseIcon";
-import SuccessIcon from "@icons/SuccessIcon";
-import Button from "@components/Button";
-import ErrorIcon from "@icons/ErrorIcon";
-import WarningIcon from "@icons/WarningIcon";
-import InfoIcon from "@icons/InfoIcon";
-import "./index.css";
+// import { getFormattedDateString, TIME_12_FORMAT } from "@utils/handleDates";
+// import { useToast } from "@hooks/useToast";
+import type { ToastProps } from "../../types/toastTypes";
+import { CloseIcon, SuccessIcon, ErrorIcon, WarningIcon, InfoIcon } from "@shared/components/icons";
 
 export const Toast = ({ id, title, type, message, removing }: ToastProps) => {
-  const { removeToast } = useToast();
+  // const { removeToast } = useToast();
 
   const icons = {
     success: <SuccessIcon width={24} height={24} color="var(--success-500)" />,
@@ -25,16 +19,14 @@ export const Toast = ({ id, title, type, message, removing }: ToastProps) => {
       <div className="main__content">
         <header>
           <h6>{title}</h6>
-          <Button variant="icon" onClick={() => removeToast(id || "")}>
+          {/* <button onClick={() => removeToast(id || "")}>
             <CloseIcon width={24} height={24} color="var(--neutral-900)" />
-          </Button>
+          </button> */}
         </header>
         <main>
           <p>{message}</p>
         </main>
-        <footer>
-          <p>{getFormattedDateString(new Date(), TIME_12_FORMAT)}</p>
-        </footer>
+        <footer>{/* <p>{getFormattedDateString(new Date(), TIME_12_FORMAT)}</p> */}</footer>
       </div>
       <div className="progress__bar"></div>
     </div>

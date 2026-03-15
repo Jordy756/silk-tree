@@ -1,4 +1,4 @@
-import { type ComponentPropsWithoutRef } from "react";
+import type { ComponentPropsWithoutRef } from "react";
 
 interface Props extends ComponentPropsWithoutRef<"button"> {
   variant?: "primary" | "secondary";

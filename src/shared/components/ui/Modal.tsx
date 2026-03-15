@@ -1,6 +1,5 @@
 import type { ReactNode, RefObject } from "react";
-import CloseIcon from "@icons/CloseIcon";
-import Button from "@components/Button";
+import { CloseIcon } from "@shared/components/icons";
 
 type Props = {
   dialogRef: RefObject<HTMLDialogElement>;
@@ -14,9 +13,9 @@ export const Modal = ({ dialogRef, title, children, closeModal }: Props) => {
     <dialog ref={dialogRef} className="standard__modal">
       <header>
         <h5>{title}</h5>
-        <Button variant="icon" onClick={closeModal}>
+        <button onClick={closeModal}>
           <CloseIcon width={24} height={24} color="var(--neutral-50)" />
-        </Button>
+        </button>
       </header>
       <main>{children}</main>
     </dialog>

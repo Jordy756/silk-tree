@@ -8,42 +8,42 @@ import { getDates, getOverlapToastData } from "../utils/handleMedicalAppointment
 import { useMedicalAppointments } from "./useMedicalAppointments";
 
 export const useUpdateMedicalAppointment = () => {
-    const { addToast } = useToast();
-    const { closeModal } = useStandardModal();
-    const { currentMedicalAppointment, modifyMedicalAppointment, checkMedicalAppointmentOverlap } =
-        useMedicalAppointments();
+  const { addToast } = useToast();
+  const { closeModal } = useStandardModal();
+  const { currentMedicalAppointment, modifyMedicalAppointment, checkMedicalAppointmentOverlap } =
+    useMedicalAppointments();
 
-    const updateMedicalAppointment = async ({
-        appointmentDate,
-        initialHour,
-        finalHour,
-        specialty: selectedSpecialty,
-    }: MedicalAppointmentFormValues) => {
-        const { startDate, endDate } = getDates(appointmentDate, initialHour, finalHour);
-        const specialty: Specialty = JSON.parse(selectedSpecialty);
+  const updateMedicalAppointment = async ({
+    appointmentDate,
+    initialHour,
+    finalHour,
+    specialty: selectedSpecialty,
+  }: MedicalAppointmentFormValues) => {
+    const { startDate, endDate } = getDates(appointmentDate, initialHour, finalHour);
+    const specialty: Specialty = JSON.parse(selectedSpecialty);
 
-        currentMedicalAppointment.title = `Cita de ${specialty.name}`;
-        currentMedicalAppointment.start = startDate;
-        currentMedicalAppointment.end = endDate;
-        currentMedicalAppointment.specialty = specialty;
+    currentMedicalAppointment.title = `Cita de ${specialty.name}`;
+    currentMedicalAppointment.start = startDate;
+    currentMedicalAppointment.end = endDate;
+    currentMedicalAppointment.specialty = specialty;
 
-        if (checkMedicalAppointmentOverlap(currentMedicalAppointment)) return addToast(getOverlapToastData());
+    if (checkMedicalAppointmentOverlap(currentMedicalAppointment)) return addToast(getOverlapToastData());
 
-        try {
-            await updateMedicalAppointmentService(currentMedicalAppointment);
-            modifyMedicalAppointment(currentMedicalAppointment);
+    try {
+      await updateMedicalAppointmentService(currentMedicalAppointment);
+      modifyMedicalAppointment(currentMedicalAppointment);
 
-            addToast({
-                title: "Cita actualizada exitosamente",
-                message: `Su cita ha sido actualizada correctamente`,
-                type: "success",
-            });
-            closeModal();
-        } catch (error: any) {
-            console.error(error);
-            if (error instanceof ApiError) addToast({ title: error.name, message: error.message, type: "error" });
-        }
-    };
+      addToast({
+        title: "Cita actualizada exitosamente",
+        message: `Su cita ha sido actualizada correctamente`,
+        type: "success",
+      });
+      closeModal();
+    } catch (error: any) {
+      console.error(error);
+      if (error instanceof ApiError) addToast({ title: error.name, message: error.message, type: "error" });
+    }
+  };
 
-    return { updateMedicalAppointment };
+  return { updateMedicalAppointment };
 };

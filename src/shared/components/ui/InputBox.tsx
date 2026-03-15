@@ -1,22 +1,23 @@
 import type { FieldError } from "react-hook-form";
 import type { ReactElement, JSX } from "react";
 
-export type Props = {
-  labelText: string;
+interface Props {
+  label: string;
+  htmlFor: string;
   error: FieldError | undefined;
   children: ReactElement<
     JSX.IntrinsicElements["input"] | JSX.IntrinsicElements["select"] | JSX.IntrinsicElements["textarea"]
   >;
-};
+}
 
-export const InputBox = ({ labelText, error, children }: Props) => {
+export const InputBox = ({ label, htmlFor, error, children }: Props) => {
   return (
-    <div className="input__box">
-      <fieldset>
+    <div className="">
+      <div className="">
         {children}
-        <legend>{labelText}</legend>
-      </fieldset>
-      {error && <p>{error.message}</p>}
+        <label htmlFor={htmlFor} className="">{label}</label>
+      </div>
+      {error && <p className="">{error.message}</p>}
     </div>
   );
 };

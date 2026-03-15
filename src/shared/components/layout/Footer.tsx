@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { NavigationLink } from "@shared/components/ui/NavigationLink.tsx";
+import { NavigationLink } from "@shared/components/ui";
 import basics from "@shared/data/basics.json";
 
 const year = new Date().getFullYear();

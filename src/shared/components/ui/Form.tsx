@@ -2,7 +2,7 @@ import type { UseFormHandleSubmit } from "react-hook-form";
 
 type Props = {
   children: React.ReactNode;
-  onSubmit: (data: any) => void;
+  onSubmit: (data: unknown) => void;
   handleSubmit: UseFormHandleSubmit<any, undefined>;
 };
 

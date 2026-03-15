@@ -26,9 +26,9 @@
   --max-width: 1542px;
 
   /* Animations */
-  --animate-marquee: scrollLeft 60s linear infinite;
+  --animate-marquee: marqueeAnimation 60s linear infinite;
 
-  @keyframes scrollLeft {
+  @keyframes marqueeAnimation {
     to {
       transform: translateX(calc(-100% - 5rem));
     }

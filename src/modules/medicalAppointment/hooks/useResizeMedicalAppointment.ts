@@ -6,35 +6,35 @@ import { getOverlapToastData } from "../utils/handleMedicalAppointment";
 import { useMedicalAppointments } from "./useMedicalAppointments";
 
 export const useResizeMedicalAppointment = () => {
-    const { addToast } = useToast();
-    const { checkMedicalAppointmentOverlap } = useMedicalAppointments();
+  const { addToast } = useToast();
+  const { checkMedicalAppointmentOverlap } = useMedicalAppointments();
 
-    const resizeMedicalAppointment = async ({ start, end, event: medicalAppointment }: DragAndDropCalendar) => {
-        const startDate = medicalAppointment.start;
-        const endDate = medicalAppointment.end;
+  const resizeMedicalAppointment = async ({ start, end, event: medicalAppointment }: DragAndDropCalendar) => {
+    const startDate = medicalAppointment.start;
+    const endDate = medicalAppointment.end;
 
-        medicalAppointment.start = start;
-        medicalAppointment.end = end;
+    medicalAppointment.start = start;
+    medicalAppointment.end = end;
 
-        if (checkMedicalAppointmentOverlap(medicalAppointment)) {
-            medicalAppointment.start = startDate;
-            medicalAppointment.end = endDate;
-            return addToast(getOverlapToastData());
-        }
+    if (checkMedicalAppointmentOverlap(medicalAppointment)) {
+      medicalAppointment.start = startDate;
+      medicalAppointment.end = endDate;
+      return addToast(getOverlapToastData());
+    }
 
-        try {
-            await updateMedicalAppointmentService(medicalAppointment);
+    try {
+      await updateMedicalAppointmentService(medicalAppointment);
 
-            addToast({
-                title: "Horario actualizado",
-                message: `La duración de su cita de ${medicalAppointment.specialty.name} ha sido modificada correctamente`,
-                type: "success",
-            });
-        } catch (error: any) {
-            console.error(error);
-            if (error instanceof ApiError) addToast({ title: error.name, message: error.message, type: "error" });
-        }
-    };
+      addToast({
+        title: "Horario actualizado",
+        message: `La duración de su cita de ${medicalAppointment.specialty.name} ha sido modificada correctamente`,
+        type: "success",
+      });
+    } catch (error: any) {
+      console.error(error);
+      if (error instanceof ApiError) addToast({ title: error.name, message: error.message, type: "error" });
+    }
+  };
 
-    return { resizeMedicalAppointment };
+  return { resizeMedicalAppointment };
 };

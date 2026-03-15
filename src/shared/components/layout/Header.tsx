@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // import AvatarIcon from "@icons/AvatarIcon";
 // import LogoutIcon from "@icons/LogoutIcon";
 import basics from "@shared/data/basics.json";
-import { CloseIcon } from "@shared/components/icons/CloseIcon";
+import { CloseIcon } from "@shared/components/icons";
 
 export const Header = () => {
   // const { isAuthenticated } = useAuthStatus();
@@ -45,7 +45,7 @@ export const Header = () => {
               Menu
             </span>
             <button className="flex cursor-pointer" popoverTarget="menu" popoverTargetAction="hide">
-              <CloseIcon width={48} className="" />
+              <CloseIcon width={48} />
             </button>
           </div>
           <ul className="w-[min(1100px,100%)] flex flex-col gap-8 self-center">
